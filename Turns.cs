@@ -125,12 +125,10 @@ namespace TicTacToe
 
         private void CheckDiagonal()
         {
-            if (gb.GetValue(0, 1) is 'X' && gb.GetValue(2, 3) is 'X' && gb.GetValue(4, 5) is 'X'
-                         || gb.GetValue(4, 1) is 'X' && gb.GetValue(2, 3) is 'X' && gb.GetValue(0, 5) is 'X') { pOneWins = true; } // Player One Wins!
+            if (gb[0, 1] == 'X' && gb[2, 3] == 'X' && gb[4, 5] == 'X'|| gb[4, 1] == 'X' && gb[2, 3] == 'X' && gb[0, 5] == 'X') { pOneWins = true; } // Player One Wins!
 
-            else if (gb.GetValue(0, 1) is 'O' && gb.GetValue(2, 3) is 'O' && gb.GetValue(4, 5) is 'O'
-                         || gb.GetValue(4, 1) is 'O' && gb.GetValue(2, 3) is 'O' && gb.GetValue(0, 5) is 'O') { pTwoWins = true; } // Player Two Wins!
-
+            else if (gb[0, 1] == 'O' && gb[2, 3] == 'O' && gb[4, 5] == 'O' || gb[4, 1] == 'O' && gb[2, 3] == 'O' && gb[0, 5] == 'O') { pTwoWins = true; } // Player Two Wins!
+            
             else if (gb[0,1] != '\0' && gb[2,3] != '\0' && gb[4, 5] != '\0' && gb[4, 1] != '\0' && 
                             gb[0, 5] != '\0' && gb[0,3] != '\0' && gb[2,5] != '\0' && gb[4,3] != '\0' && gb[2, 1] != '\0') { isDraw = true; } // Game is a draw!
 
@@ -138,27 +136,27 @@ namespace TicTacToe
 
         private void CheckHorizontal()
         {
-            if (gb.GetValue(0, 1) is 'X' && gb.GetValue(0, 3) is 'X' && gb.GetValue(0, 5) is 'X'
-                        || gb.GetValue(2, 1) is 'X' && gb.GetValue(2, 3) is 'X' && gb.GetValue(2, 5) is 'X'
-                                || gb.GetValue(4, 1) is 'X' && gb.GetValue(4, 3) is 'X' && gb.GetValue(4, 5) is 'X') { pOneWins = true; } // Player One wins!
+            if (gb[0, 1] == 'X' && gb[0, 3] == 'X' && gb[0, 5] == 'X'
+                        || gb[2, 1] == 'X' && gb[2, 3] == 'X' && gb[2, 5] == 'X'
+                                || gb[4, 1] == 'X' && gb[4, 3] == 'X' && gb[4, 5] == 'X') { pOneWins = true; } // Player One wins!
 
-            else if (gb.GetValue(0, 1) is 'O' && gb.GetValue(0, 3) is 'O' && gb.GetValue(0, 5) is 'O'
-                        || gb.GetValue(2, 1) is 'O' && gb.GetValue(2, 3) is 'O' && gb.GetValue(2, 5) is 'O'
-                                || gb.GetValue(4, 1) is 'O' && gb.GetValue(4, 3) is 'O' && gb.GetValue(4, 5) is 'O') { pTwoWins = true; } // Player Two wins!
+            else if (gb[0, 1] == 'O' && gb[0, 3] == 'O' && gb[0, 5] == 'O'
+                        || gb[2, 1] == 'O' && gb[2, 3] == 'O' && gb[2, 5] == 'O'
+                                || gb[4, 1] == 'O' && gb[4, 3] == 'O' && gb[4, 5] == 'O') { pTwoWins = true; } // Player Two wins!
 
-            else if (gb[0,1] != '\0' && gb[0, 3] != '\0' && gb[0, 5] != '\0' && gb[2,1] != '\0' &&
-                            gb[2,3] != '\0' && gb[2,5] != '\0' && gb[4,1] != '\0' && gb[4,3] != '\0' && gb[4,5] != '\0') { isDraw = true; } // Game is a draw!
+            else if (gb[0, 1] != '\0' && gb[0, 3] != '\0' && gb[0, 5] != '\0' && gb[2, 1] != '\0' &&
+                            gb[2, 3] != '\0' && gb[2, 5] != '\0' && gb[4, 1] != '\0' && gb[4, 3] != '\0' && gb[4, 5] != '\0') { isDraw = true; } // Game is a draw!
         }
 
         private void CheckVertical()
         {
-            if (gb.GetValue(0, 1) is 'X' && gb.GetValue(2, 1) is 'X' && gb.GetValue(4, 1) is 'X' 
-                         || gb.GetValue(0, 3) is 'X' && gb.GetValue(2, 3) is 'X' && gb.GetValue(4, 3) is 'X'
-                                 || gb.GetValue(0, 5) is 'X' && gb.GetValue(2, 5) is 'X' && gb.GetValue(4, 5) is 'X') { pOneWins = true; } // Player One Wins!
+            if (gb[0, 1] == 'X' && gb[2, 1] == 'X' && gb[4, 1] == 'X'
+                        || gb[0, 3] == 'X' && gb[2, 3] == 'X' && gb[4, 3] == 'X'
+                                || gb[0, 5] == 'X' && gb[2, 5] == 'X' && gb[4, 5] == 'X') { pOneWins = true; } // Player One Wins!
 
-            else if (gb.GetValue(0, 1) is 'O' && gb.GetValue(2, 1) is 'O' && gb.GetValue(4, 1) is 'O'
-                         || gb.GetValue(0, 3) is 'O' && gb.GetValue(2, 3) is 'O' && gb.GetValue(4, 3) is 'O'
-                                 || gb.GetValue(0, 5) is 'O' && gb.GetValue(2, 5) is 'O' && gb.GetValue(4, 5) is 'O') { pTwoWins = true; } // Player Two Wins!
+            else if (gb[0, 1] == 'O' && gb[2, 1] == 'O' && gb[4, 1] == 'O'
+                        || gb[0, 3] == 'O' && gb[2, 3] == 'O' && gb[4, 3] == 'O'
+                                || gb[0, 5] == 'O' && gb[2, 5] == 'O' && gb[4, 5] == 'O') { pTwoWins = true; } // Player Two Wins!
 
             else if (gb[0, 1] != '\0' && gb[2, 1] != '\0' && gb[4, 1] != '\0' && gb[0, 3] != '\0' &&
                             gb[2, 3] != '\0' && gb[4, 3] != '\0' && gb[0, 5] != '\0' && gb[2, 5] != '\0' && gb[4, 5] != '\0') { isDraw = true; } // Game is a draw!
