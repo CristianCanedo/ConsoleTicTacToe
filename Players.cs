@@ -10,12 +10,13 @@ namespace TicTacToe
 {
     public class Players
     {
-
+        // Declaraing two public string variables for PlayerOne and PlayerTwo
         public string PlayerOne { get; set; }
         public string PlayerTwo { get; set; }
 
         public Players()
         {
+            // Asks user input for PlayerOne and PlayerTwo names
             Console.Write("Choose PlayerOne name: ");
             PlayerOne = Console.ReadLine();
             Console.Write("Choose PlayerTwo name: ");
