@@ -10,11 +10,14 @@ namespace TicTacToe
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Tic-Tac-Toe!\n");
-            Turns t = new Turns();
-            Board b = new Board();
-            b.DisplayBoard();
-            t.StartTurns();
+            Console.WriteLine("***********************");
+            Console.WriteLine("Welcome to Tic-Tac-Toe!");
+            Console.WriteLine("***********************\n");
+
+            Turns t = new Turns(); // Creates new object of type Turn (initiates new players)
+            Board b = new Board(); // Creates new object of type Board (initiates a new clean board)
+            b.DisplayBoard(); // Displays board
+            t.StartTurns(); // Starts turns from the Turn class
 
             Console.WriteLine("Thanks for playing!");
             Console.ReadLine();
